@@ -5,9 +5,8 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <meta name=description content='An open source revision site/app, made by students, for students'>
     <title>OpenRevise</title>
-    <base href='./'>
-    <link rel='stylesheet' href='../global/styles/bulma/bulma.css'>
-    <link rel='stylesheet' href='styles/master.css'>
+    <link rel='stylesheet' href='page-res/global/bulma/bulma.css'>
+    <link rel='stylesheet' href='page-res/master/master.css'>
   </head>
   <body class='has-navbar-fixed-top'>
     <nav class='navbar is-fixed-top is-light'>
@@ -23,30 +22,30 @@
       </div>
       <div class='navbar-menu'>
         <div class='navbar-start'>
-          <a id='navbar-item-home' class='navbar-item is-tab is-active'>
+          <a id='master-navbar-item-home' class='navbar-item is-tab is-active master-navbar-items'>
             <span class='icon'><i class='fas fa-home'></i></span>
             <span>Home</span>
           </a>
-          <a id='navbar-item-revision' class='navbar-item is-tab'>
+          <a id='master-navbar-item-revision' class='navbar-item is-tab master-navbar-items'>
             <span class='icon'><i class='fas fa-book-open'></i></span>
             <span>Revision</span>
           </a>
-          <a id='navbar-item-settings' class='navbar-item is-tab'>
+          <a id='master-navbar-item-settings' class='navbar-item is-tab master-navbar-items'>
             <span class='icon'><i class='fas fa-cogs'></i></span>
             <span>Settings</span>
           </a>
         </div>
         <div class='navbar-end'>
-          <a class='navbar-item is-tab'>
+          <a class='navbar-item is-tab master-navbar-items'>
             <span class='icon'><i class='fas fa-play'></i></span>
             <span>Not playing anything</span>
           </a>
         </div>
       </div>
     </nav>
-    <iframe class='master-main' src='../home/home.html'></iframe>
+    <main class='master-main' src='../home/home.html'></main>
   </body>
-  <script src='../global/styles/fontawesome/js/all.js'></script>
-  <script src='../global/scripts/jquery-3.5.0.js'></script>
-  <script src='scripts/master.js'></script>
+  <script src='page-res/global/fontawesome/js/all.js'></script>
+  <script src='page-res/global/jquery-3.5.0.js'></script>
+  <script src='page-res/master/master.js'></script>
 </html>

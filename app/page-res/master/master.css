@@ -6,6 +6,10 @@
   margin-top: 2px;
 }
 
+.master-navbar-items {
+  user-select: none;
+}
+
 .master-main {
   width: 100%;
 }
