@@ -13,7 +13,7 @@ function createWindow () {
     //win.removeMenu()
   }
 
-  win.loadFile('app/master.html')
+  win.loadFile('app/pages/master/master.html')
 }
 
 app.whenReady().then(createWindow)

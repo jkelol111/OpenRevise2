@@ -7,8 +7,26 @@
     <title>OpenRevise</title>
   </head>
   <body>
+    <noscript>
+      This website requires JavaScript. Please disable NoScript or any other script blocking
+      addon/service from your browser. We do not serve ads nor collect analytics.
+    </noscript>
     <script>
-      window.location = window.location + '/app/master.html'
+      // Thanks to John Doherty on Stack Overflow for this genius solution
+      const lastPath = window.location.pathname.split('/').filter(Boolean).pop()
+      console.log(lastPath)
+      switch (lastPath) { 
+        case '':
+          window.location.assign(window.location.hostname + '/app/pages/master/master.html')
+          break
+        case 'index.html':
+          window.location.assign(window.location.hostname + window.location.pathname.split('index.html')[0] + 'app/pages/master/master.html')
+          break
+        default:
+          alert('You will be redirected to OpenRevise.\n\nError: specified URL not recognized')
+          document.write('<a href="https://openrevise.github.io/app/pages/master/master.html">Please visit https://openrevise.github.io/app/pages/master/master.html</a>')
+          break
+      }
     </script>
   </body>
 </html>

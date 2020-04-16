@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name=description content='An open source revision site/app, made by students, for students'>
+    <title>OpenRevise</title>
+    <base href='./'>
+    <link rel='stylesheet' href='../global/styles/bulma/bulma.css'>
+    <link rel='stylesheet' href='styles/master.css'>
+  </head>
+  <body class='has-navbar-fixed-top'>
+    <nav class='navbar is-fixed-top is-light'>
+      <div class='navbar-brand'>
+        <a class='navbar-item' href='master.html'>
+          <b>Open Revise</b>
+        </a>
+        <a class='navbar-burger'>
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </div>
+      <div class='navbar-menu'>
+        <div class='navbar-start'>
+          <a id='navbar-item-home' class='navbar-item is-tab is-active'>
+            <span class='icon'><i class='fas fa-home'></i></span>
+            <span>Home</span>
+          </a>
+          <a id='navbar-item-revision' class='navbar-item is-tab'>
+            <span class='icon'><i class='fas fa-book-open'></i></span>
+            <span>Revision</span>
+          </a>
+          <a id='navbar-item-settings' class='navbar-item is-tab'>
+            <span class='icon'><i class='fas fa-cogs'></i></span>
+            <span>Settings</span>
+          </a>
+        </div>
+        <div class='navbar-end'>
+          <a class='navbar-item is-tab'>
+            <span class='icon'><i class='fas fa-play'></i></span>
+            <span>Not playing anything</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <iframe class='master-main' src='../home/home.html'></iframe>
+  </body>
+  <script src='../global/styles/fontawesome/js/all.js'></script>
+  <script src='../global/scripts/jquery-3.5.0.js'></script>
+  <script src='scripts/master.js'></script>
+</html>
