@@ -1,9 +1,6 @@
-function closeHamburgerMenu () {
+function navigatePage (page) {
   $('.navbar-burger').toggleClass('is-active')
   $('.navbar-menu').toggleClass('is-active')
-}
-
-function navigatePage (page) {
   $('.master-main').animate({
     opacity: 0.1
   }, 250, function () {
@@ -28,7 +25,6 @@ $(document).ready(function () {
       $('#master-navbar-item-revision').removeClass('is-active')
       $('#master-navbar-item-settings').removeClass('is-active')
       currentPage = 'home'
-      closeHamburgerMenu()
       navigatePage('home')
     }
   })
@@ -39,7 +35,6 @@ $(document).ready(function () {
       $('#master-navbar-item-settings').removeClass('is-active')
       currentPage = 'revision'
       navigatePage('revision')
-      closeHamburgerMenu()
     }
   })
   $('#master-navbar-item-settings').click(function () {
@@ -49,7 +44,6 @@ $(document).ready(function () {
       $('#master-navbar-item-settings').addClass('is-active')
       currentPage = 'settings'
       //navigatePage('settings')
-      closeHamburgerMenu()
     }
   })
 })
