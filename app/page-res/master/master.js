@@ -1,6 +1,6 @@
 function navigatePage (page) {
-  $('.navbar-burger').toggleClass('is-active')
-  $('.navbar-menu').toggleClass('is-active')
+  $('.navbar-burger').removeClass('is-active')
+  $('.navbar-menu').removeClass('is-active')
   $('.master-main').animate({
     opacity: 0.1
   }, 250, function () {
