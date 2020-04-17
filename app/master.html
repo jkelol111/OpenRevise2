@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html class='master-overflow-auto'>
   <head>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <meta name=description content='An open source revision site/app, made by students, for students'>
     <title>OpenRevise</title>
-    <link rel='stylesheet' href='page-res/global/bulma/bulma.css'>
+    <link id='master-theme' rel='stylesheet' href='page-res/global/bulma/bulmaswatch-bulma.min.css'>
     <link rel='stylesheet' href='page-res/master/master.css'>
+    <script src='page-res/global/fontawesome/js/all.js'></script>
   </head>
   <body class='has-navbar-fixed-top'>
-    <nav class='navbar is-fixed-top is-light'>
+    <nav class='navbar is-fixed-top'>
       <div class='navbar-brand'>
-        <a class='navbar-item' href='master.html'>
-          <b>Open Revise</b>
+        <a class='navbar-item is-unselectable' href='master.html'>
+          <img id='master-logo' class='master-logo-light' src="page-res/master/openrevise-logo.png" width="28" height="28">
         </a>
         <a class='navbar-burger'>
           <span></span>
@@ -22,30 +23,29 @@
       </div>
       <div class='navbar-menu'>
         <div class='navbar-start'>
-          <a id='master-navbar-item-home' class='navbar-item is-tab is-active master-navbar-items'>
+          <a id='master-navbar-item-home' class='navbar-item is-tab is-active is-unselectable '>
             <span class='icon'><i class='fas fa-home'></i></span>
             <span>Home</span>
           </a>
-          <a id='master-navbar-item-revision' class='navbar-item is-tab master-navbar-items'>
+          <a id='master-navbar-item-revision' class='navbar-item is-tab is-unselectable'>
             <span class='icon'><i class='fas fa-book-open'></i></span>
             <span>Revision</span>
           </a>
-          <a id='master-navbar-item-settings' class='navbar-item is-tab master-navbar-items'>
+          <a id='master-navbar-item-settings' class='navbar-item is-tab is-unselectable'>
             <span class='icon'><i class='fas fa-cogs'></i></span>
             <span>Settings</span>
           </a>
         </div>
         <div class='navbar-end'>
-          <a class='navbar-item is-tab master-navbar-items'>
+          <a class='navbar-item is-tab is-unselectable'>
             <span class='icon'><i class='fas fa-play'></i></span>
-            <span>Not playing anything</span>
+            <span>Player</span>
           </a>
         </div>
       </div>
     </nav>
-    <main class='master-main' src='../home/home.html'></main>
+    <main class='master-main'></main>
   </body>
-  <script src='page-res/global/fontawesome/js/all.js'></script>
   <script src='page-res/global/jquery-3.5.0.js'></script>
-  <script src='page-res/master/master.js'></script>
+  <script src='page-res/master/master.js' defer></script>
 </html>

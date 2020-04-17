@@ -6,8 +6,8 @@
   margin-top: 2px;
 }
 
-.master-navbar-items {
-  user-select: none;
+.master-logo-light {
+  filter: invert(1);
 }
 
 .master-main {

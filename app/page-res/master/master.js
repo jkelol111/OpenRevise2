@@ -1,15 +1,31 @@
-function navigatePage (page) {
-  $('.navbar-burger').removeClass('is-active')
-  $('.navbar-menu').removeClass('is-active')
-  $('.master-main').animate({
-    opacity: 0.1
-  }, 250, function () {
-    $('.master-main').load(page + ".html", function () {
-      $('.master-main').animate({
-        opacity: 1
-      }, 250)
+'use strict'
+
+const OpenReviseMaster = {
+  swapAppTheme: function (selectedTheme) {
+    switch (selectedTheme) {
+      case 'cyborg':
+        $('#master-theme').attr('href', 'page-res/global/bulma/bulmaswatch-cyborg.min.css')
+        $('#master-logo').removeClass('master-logo-light')
+        break
+      case 'bulma':
+        $('#master-theme').attr('href', 'page-res/global/bulma/bulmaswatch-bulma.min.css')
+        $('#master-logo').addClass('master-logo-light')
+        break
+    }
+  },
+  navigatePage: function (page) {
+    $('.navbar-burger').removeClass('is-active')
+    $('.navbar-menu').removeClass('is-active')
+    $('.master-main').animate({
+      opacity: 0.4
+    }, 200, function () {
+      $('.master-main').load(page + ".html", function () {
+        $('.master-main').animate({
+            opacity: 1
+        }, 200)
+      })
     })
-  })
+  }
 }
 
 $(document).ready(function () {
@@ -25,7 +41,7 @@ $(document).ready(function () {
       $('#master-navbar-item-revision').removeClass('is-active')
       $('#master-navbar-item-settings').removeClass('is-active')
       currentPage = 'home'
-      navigatePage('home')
+      OpenReviseMaster.navigatePage('home')
     }
   })
   $('#master-navbar-item-revision').click(function () {
@@ -34,7 +50,7 @@ $(document).ready(function () {
       $('#master-navbar-item-revision').addClass('is-active')
       $('#master-navbar-item-settings').removeClass('is-active')
       currentPage = 'revision'
-      navigatePage('revision')
+      OpenReviseMaster.navigatePage('revision')
     }
   })
   $('#master-navbar-item-settings').click(function () {
@@ -43,7 +59,12 @@ $(document).ready(function () {
       $('#master-navbar-item-revision').removeClass('is-active')
       $('#master-navbar-item-settings').addClass('is-active')
       currentPage = 'settings'
-      //navigatePage('settings')
+      OpenReviseMaster.navigatePage('settings')
     }
   })
+  if (localStorage.getItem('OpenRevise2.selectedTheme') === null) {
+    localStorage.setItem('OpenRevise2.selectedTheme', 'bulma')
+  } else {
+    OpenReviseMaster.swapAppTheme(localStorage.getItem('OpenRevise2.selectedTheme'))
+  }
 })
