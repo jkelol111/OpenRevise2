@@ -15,5 +15,6 @@
   margin-top: 12px;
   padding: 0px 10px;
   text-align: right;
+  height: 40vh;
   overflow: auto;
 }
