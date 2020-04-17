@@ -1,0 +1,70 @@
+<link rel="stylesheet" href="page-res/calculator/calculator.css">
+<section class='section'>
+  <h1 class="title has-text-centered is-unselectable">Web Calculator (Beta)</h1>
+  <div class="container">
+    <div class="tabs is-centered">
+      <ul>
+        <li class="is-active">
+          <a>
+            <span class="icon is-small"><i class="fas fa-plus"></i></span>
+            <span>Standard</span>
+          </a>
+        </li>
+        <li>
+          <a>
+            <span class="icon is-small"><i class="fas fa-percentage"></i></span>
+            <span>Algebra</span>
+          </a>
+        </li>
+        <li>
+          <a>
+            <span class="icon is-small"><i class="fas fa-square-root-alt"></i></span>
+            <span>Calculus</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class='calculator-container is-clearfix'>
+    <div class="field has-addons">
+      <div class="control">
+        <a class="button is-static is-loading">
+          <span class="icon is-question">
+            <i class="fas fa-equals"></i>
+          </span>
+        </a>
+      </div>
+      <div class="control">
+        <input class="input calculator-input" type="text" placeholder="Input">
+      </div>
+      <div class="control">
+        <a class="button">
+          <span class="icon is-small">
+            <i class="fas fa-equals"></i>
+          </span>
+        </a>
+      </div>
+      <div class="control">
+        <a class="button is-warning">
+          <span class="icon is-small">
+            <i class="fas fa-history"></i>
+          </span>
+        </a>
+      </div>
+      <div class="control">
+        <a class="button is-danger">
+          <span class="icon is-small">
+            <i class="fas fa-backspace"></i>
+          </span>
+        </a>
+      </div>
+    </div>
+    <div class="field">
+      <div class="control">
+        <textarea class="textarea calculator-result" placeholder="Output" rows='9' readonly></textarea>
+      </div>
+    </div>
+  </div>
+</section>
+<script defer src="page-res/calculator/math.min.js"></script>
+<!-- <script src="page-res/calculator/calculator.js"></script> -->

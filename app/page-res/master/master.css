@@ -6,6 +6,10 @@
   margin-top: 2px;
 }
 
+.master-overflow-auto {
+  overflow-y: auto;
+}
+
 .master-logo-light {
   filter: invert(1);
 }

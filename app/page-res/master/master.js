@@ -40,6 +40,8 @@ $(document).ready(function () {
       $('#master-navbar-item-home').addClass('is-active')
       $('#master-navbar-item-revision').removeClass('is-active')
       $('#master-navbar-item-settings').removeClass('is-active')
+      $('#master-navbar-item-calculator').removeClass('is-active')
+      $('#master-navbar-item-player').removeClass('is-active')
       currentPage = 'home'
       OpenReviseMaster.navigatePage('home')
     }
@@ -49,6 +51,8 @@ $(document).ready(function () {
       $('#master-navbar-item-home').removeClass('is-active')
       $('#master-navbar-item-revision').addClass('is-active')
       $('#master-navbar-item-settings').removeClass('is-active')
+      $('#master-navbar-item-calculator').removeClass('is-active')
+      $('#master-navbar-item-player').removeClass('is-active')
       currentPage = 'revision'
       OpenReviseMaster.navigatePage('revision')
     }
@@ -58,8 +62,21 @@ $(document).ready(function () {
       $('#master-navbar-item-home').removeClass('is-active')
       $('#master-navbar-item-revision').removeClass('is-active')
       $('#master-navbar-item-settings').addClass('is-active')
+      $('#master-navbar-item-calculator').removeClass('is-active')
+      $('#master-navbar-item-player').removeClass('is-active')
       currentPage = 'settings'
       OpenReviseMaster.navigatePage('settings')
+    }
+  })
+  $('#master-navbar-item-calculator').click(function () {
+    if (currentPage !== 'calculator') {
+      $('#master-navbar-item-home').removeClass('is-active')
+      $('#master-navbar-item-revision').removeClass('is-active')
+      $('#master-navbar-item-settings').removeClass('is-active')
+      $('#master-navbar-item-calculator').addClass('is-active')
+      $('#master-navbar-item-player').removeClass('is-active')
+      currentPage = 'calculator'
+      OpenReviseMaster.navigatePage('calculator')
     }
   })
   if (localStorage.getItem('OpenRevise2.selectedTheme') === null) {
