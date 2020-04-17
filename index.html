@@ -17,8 +17,10 @@
       console.log(lastPath)
       switch (lastPath) { 
         case '':
-        case 'index.html':
           window.location.replace('/app/master.html')
+          break
+        case 'index.html':
+          window.location.replace('../app/master.html')
           break
         case 'OpenRevise2':
           window.location.replace('/OpenRevise2/app/master.html')
