@@ -17,13 +17,13 @@
       console.log(lastPath)
       switch (lastPath) { 
         case '':
-          window.location.assign(window.location.hostname + '/app/master.html')
+          window.location.replace(window.location.hostname + '/app/master.html')
           break
         case 'index.html':
-          window.location.assign(window.location.hostname + window.location.pathname.split('index.html')[0] + 'app/master.html')
+          window.location.replace(window.location.hostname + window.location.pathname.split('index.html')[0] + 'app/master.html')
           break
         case 'OpenRevise2':
-          window.location.assign(window.location.hostname + '/OpenRevise2/app/master.html')
+          window.location.replace(window.location.hostname + '/OpenRevise2/app/master.html')
           break
         default:
           alert('You will be redirected to OpenRevise.\n\nError: specified URL not recognized')
