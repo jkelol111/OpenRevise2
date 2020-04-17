@@ -3,13 +3,25 @@
 const OpenReviseMaster = {
   swapAppTheme: function (selectedTheme) {
     switch (selectedTheme) {
+      case 'bulma':
+        $('#master-theme').attr('href', 'page-res/global/bulma/bulmaswatch-bulma.min.css')
+        $('#master-logo').addClass('master-logo-light')
+        break
       case 'cyborg':
         $('#master-theme').attr('href', 'page-res/global/bulma/bulmaswatch-cyborg.min.css')
         $('#master-logo').removeClass('master-logo-light')
         break
-      case 'bulma':
-        $('#master-theme').attr('href', 'page-res/global/bulma/bulmaswatch-bulma.min.css')
-        $('#master-logo').addClass('master-logo-light')
+      case 'slate':
+        $('#master-theme').attr('href', 'page-res/global/bulma/bulmaswatch-slate.min.css')
+        $('#master-logo').removeClass('master-logo-light')
+        break
+      case 'superhero':
+        $('#master-theme').attr('href', 'page-res/global/bulma/bulmaswatch-superhero.min.css')
+        $('#master-logo').removeClass('master-logo-light')
+        break
+      case 'solar':
+        $('#master-theme').attr('href', 'page-res/global/bulma/bulmaswatch-solar.min.css')
+        $('#master-logo').removeClass('master-logo-light')
         break
     }
   },
