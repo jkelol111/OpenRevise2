@@ -1,14 +1,10 @@
 /* Position of the calculator */
 .calculator-container {
   margin-top: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
+  width: inherit;
 }
 
 .calculator-input {
-  box-sizing: border-box;
   padding: 0px 10px;
   text-align: right;
   font-weight: bolder;
@@ -18,8 +14,6 @@
   resize: none;
   margin-top: 12px;
   padding: 0px 10px;
-  width: inherit;
   text-align: right;
   overflow: auto;
-  flex-basis: auto;
 }

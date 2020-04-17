@@ -1,8 +1,8 @@
 <link rel="stylesheet" href="page-res/calculator/calculator.css">
 <section class='section'>
-  <h1 class="title has-text-centered is-unselectable">Web Calculator (Beta)</h1>
+  <h1 class="title is-4 has-text-centered is-unselectable">Web Calculator</h1>
   <div class="container">
-    <div class="tabs is-centered">
+    <div class="tabs is-centered is-hidden-mobile">
       <ul>
         <li class="is-active">
           <a>
@@ -25,34 +25,41 @@
       </ul>
     </div>
   </div>
-  <div class='calculator-container is-clearfix'>
+  <div class="field is-grouped is-grouped-centered">
+    <div class="control has-icons-left is-hidden-tablet">
+      <div class="icon is-small is-left">
+        <i class="fas fa-plus"></i>
+      </div>
+      <div class="select">
+        <select>
+          <option value='standard'>Scientific</option>
+          <option value='algebra'>Algebra</option>
+          <option value='calculus'>Calculus</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class='container calculator-container'>
     <div class="field has-addons">
       <div class="control">
-        <a class="button is-static is-loading">
-          <span class="icon is-question">
-            <i class="fas fa-equals"></i>
-          </span>
-        </a>
-      </div>
-      <div class="control">
-        <input class="input calculator-input" type="text" placeholder="Input">
-      </div>
-      <div class="control">
-        <a class="button">
-          <span class="icon is-small">
-            <i class="fas fa-equals"></i>
-          </span>
-        </a>
-      </div>
-      <div class="control">
-        <a class="button is-warning">
+        <a class="button is-warning" title='Load history'>
           <span class="icon is-small">
             <i class="fas fa-history"></i>
           </span>
         </a>
       </div>
+      <div class="control is-expanded">
+        <input class="input is-fullwidth calculator-input" type="text" placeholder="Input">
+      </div>
       <div class="control">
-        <a class="button is-danger">
+        <a class="button" title='Calculate expression'>
+          <span class="icon is-small">
+            <i class="fas fa-equals"></i>
+          </span>
+        </a>
+      </div>
+      <div class="control">
+        <a class="button is-danger" title='Clear output'>
           <span class="icon is-small">
             <i class="fas fa-backspace"></i>
           </span>
@@ -60,9 +67,26 @@
       </div>
     </div>
     <div class="field">
-      <div class="control">
-        <textarea class="textarea calculator-result" placeholder="Output" rows='9' readonly></textarea>
+      <div class="control is-expanded">
+        <textarea class="textarea is-fullwidth calculator-result" placeholder="Output" rows='8' readonly></textarea>
       </div>
+    </div>
+    <div class='buttons has-addons is-centered'>
+      <button class="button" title='About'>
+        <span class="icon is-small">
+          <i class="fas fa-info"></i>
+        </span>
+      </button>
+      <button class="button is-info" title='Open tutorial'>
+        <span class="icon is-small">
+          <i class="fas fa-question"></i>
+        </span>
+      </button>
+      <button class="button" title='GitHub'>
+        <span class="icon is-small">
+          <i class="fab fa-github"></i>
+        </span>
+      </button>
     </div>
   </div>
 </section>
