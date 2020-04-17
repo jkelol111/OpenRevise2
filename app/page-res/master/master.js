@@ -23,6 +23,10 @@ const OpenReviseMaster = {
         $('#master-theme').attr('href', 'page-res/global/bulma/bulmaswatch-solar.min.css')
         $('#master-logo').removeClass('master-logo-light')
         break
+      case 'litera':
+        $('#master-theme').attr('href', 'page-res/global/bulma/bulmaswatch-litera.min.css')
+        $('#master-logo').addClass('master-logo-light')
+        break
     }
   },
   navigatePage: function (page) {
